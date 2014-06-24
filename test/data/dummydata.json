@@ -1,0 +1,107 @@
+{
+    "badge": [
+        {
+            "name": "Foo",
+            "image": "imfooimage",
+            "id": 3
+        },
+        {
+            "name": "Bar",
+            "image": "imbarimage",
+            "id": 4
+        }
+    ],
+    "user": [
+        {
+            "id": 1
+        },
+        {
+            "id": 2
+        }
+    ],
+    "currency": [
+        {
+            "name": "songs",
+            "type": 1,
+            "disabled": false,
+            "id": 1
+        },
+        {
+            "name": "imdisabled",
+            "type": 2,
+            "disabled": true,
+            "id": 2
+        },
+        {
+            "name": "logins",
+            "type": 2,
+            "id": 3
+        }
+    ],
+    "rule": [
+        {
+            "currency_id": 2,
+            "credit_value": 10,
+            "currency_value": 5,
+            "badge_id": 3,
+            "level": 1,
+            "name": "cid#2, c10, u5"
+        },
+        {
+            "currency_id": 2,
+            "credit_value": 20,
+            "currency_value": 10,
+            "badge_id": 3,
+            "level": 2,
+            "name": "cid#2, c20, u10"
+        },
+        {
+            "currency_id": 1,
+            "credit_value": 5,
+            "currency_value": 10,
+            "badge_id": 4,
+            "level": 1,
+            "name": "cid#1, c5, u10"
+        },
+        {
+            "currency_id": 3,
+            "credit_value": 100,
+            "currency_value": 200,
+            "badge_id": 4,
+            "level": 1,
+            "name": "cid#3, c100, u200"
+        }
+    ],
+
+    "user_badges": [
+        {
+            "user_id": 1,
+            "claimed": 0,
+            "rule_id": 1
+        },
+        {
+            "user_id": 2,
+            "rule_id": 2,
+            "claimed": 1,
+            "claimed_date": "2014-06-06 15:00"
+        }
+
+    ],
+    "user_currencies": [
+        {
+            "user_id": 1,
+            "currencies_id": 2,
+            "value": 100
+        },
+        {
+            "user_id": 1,
+            "currencies_id": 3,
+            "value": 2
+        },
+        {
+            "user_id": 2,
+            "currencies_id": 1,
+            "value": 8
+        }
+    ]
+}

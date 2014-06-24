@@ -1,0 +1,8 @@
+node_modules
+testing
+.build
+.idea
+tmp
+temp
+/test/data/*.sqlite
+npm-debug.log

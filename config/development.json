@@ -1,0 +1,49 @@
+{
+    
+    "express": {
+        "view cache": false,
+        "view engine": "dust",
+        "views": "path:./public/templates"
+    },
+
+    "view engines": {
+        "dust": {
+            "module": "engine-munger",
+            "renderer": {
+                "method": "dust",
+                "arguments": [
+                    { "cache": false },
+                    {
+                        "views": "config:express.views",
+                        "view engine": "config:express.view engine",
+                        "specialization": "config:specialization",
+                        "i18n": "config:i18n"
+                    }
+                ]
+            }
+        }
+    },
+
+    "database": {
+        "modelsPath": "path:./models/orm",
+        "connect": "mysql://root:12341234@localhost/rsapi?debug=true",
+        "settings": {
+            "connection.pool": true,
+            "connection.debug": true,
+            "instance.cache": false,
+            "instance.autoFetch": false,
+            "instance.autoSave": false,
+            "instance.returnAllErrors": true
+        }
+    },
+
+    "middleware": {
+        "fileNotFound": {
+            "enabled": false
+        },
+
+        "serverError": {
+            "enabled": false
+        }
+    }
+}
